@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://gardentesting.netlify.app/sitemap.xml
