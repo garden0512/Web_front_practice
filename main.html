@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="naver-site-verification" content="baf44f01f390415aa9090f58b74747ec958b7b92" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="buttonstyle.css">
+    <title>가든 - 나만의 사진첩</title>
+</head>
+
+<body>
+    <h1 id="sound"></h1>
+    <section class="content">
+        <div class="box bg-1">
+            <button class="button button--aylen button--round-l button--text-thick" id="name" type="text" onclick="getSound()">고양이</button>
+            <button class="button button--aylen button--round-l button--text-thick" id="name" type="text" onclick="getSound()">강아지</button>
+            <button class="button button--aylen button--round-l button--text-thick" id="name" type="text" onclick="getSound()">돼지</button>
+            <button class="button button--aylen button--round-l button--text-thick" id="name" type="text" onclick="getSound()">인간</button>
+        </div>
+    </section>
+    <br>
+    <input id="name" type="text">
+    <button onclick="getSound()">API 요청</button>
+    <br>
+    <button onclick="location.href='/sound/dog'">dog</button>
+    <br>
+    <script>
+        function getSound() {
+            const name = document.getElementById('name').value
+            fetch(`https://port-0-testing-m2ycs776873cdd7f.sel4.cloudtype.app/sound/${name}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data.sound)
+                    document.getElementById('sound').innerHTML = data.sound
+                });
+        }
+    </script>
+</body>
+
+</html>
