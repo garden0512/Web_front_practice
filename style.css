@@ -1041,11 +1041,11 @@ a:focus {
   -webkit-animation: anim-nanuk-2 0.5s forwards;
   animation: anim-nanuk-2 0.5s forwards;
 }
-.button--nanuk:hover > span:nth-child(odd),
+/* .button--nanuk:hover > span:nth-child(odd),
 .button--nanuk:hover > span:nth-child(even) {
   -webkit-animation-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
   transition-animation-function: cubic-bezier(0.75, 0, 0.125, 1);
-}
+} */
 @-webkit-keyframes anim-nanuk-1 {
   0%,
   100% {
